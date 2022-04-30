@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1651229045 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1153_fill_array函數\main.c
+	<stdio.h>
+	"fill_array.h"
+
+1651229056 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1153_fill_array函數\fill_array.c
+	<stdio.h>
+	"fill_array.h"
+
+1651212817 c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1153_fill_array函數\fill_array.h
+

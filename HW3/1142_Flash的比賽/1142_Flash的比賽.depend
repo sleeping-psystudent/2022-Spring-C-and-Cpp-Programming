@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1650735731 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1142_flash的比賽\competition.c
+	"competition.h"
+
+1650735813 c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1142_flash的比賽\competition.h
+
+1650735641 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1142_flash的比賽\main.c
+	<stdio.h>
+	<stdlib.h>
+	"competition.h"
+
