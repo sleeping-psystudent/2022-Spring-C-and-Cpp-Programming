@@ -1,30 +1,30 @@
 # 題目說明
 聖誕老公公每年都收到琳瑯滿目的禮物要求，每次處裡起來都花了他很久的時間，於是聖誕老公公決定今年送給小孩子們一頂大小和年紀成正比的聖誕帽。你會收到小孩的年紀`n` (正整數)，請製造出一頂大小為`n`的聖誕帽。帽子由三個部分組成，頂端的`^` ，左邊的帽緣`/`和右邊的帽緣`\`。請注意！當`n=1`時只會有頂端，不會有帽緣！
 
-## Input Format
+### Input Format
 一正整數`n`
 
-## Output Format
+### Output Format
 高度為`n`的聖誕帽
 
-## Input Sample 1
+### Input Sample 1
 ```c
 3
 ```
 
-## Output Sample 1
+### Output Sample 1
 ```c
   ^
  /  \
 /    \
 ```
 
-## Input Sample 2
+### Input Sample 2
 ```c
 1
 ```
 
-## Output Sample 2
+### Output Sample 2
 ```c
 ^
 ```
