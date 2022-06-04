@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1652971339 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1113_叫我「正方形」square 練習 ii - 屬性私有化\main.cpp
+	<iostream>
+	"square.h"
+
+1652971414 c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1113_叫我「正方形」square 練習 ii - 屬性私有化\square.h
+	<iostream>
+
+1652971467 source:c:\users\s9501\onedrive\桌面\c++\c&c++程式設計\1113_叫我「正方形」square 練習 ii - 屬性私有化\square.cpp
+	<iostream>
+	"square.h"
+
