@@ -1,4 +1,4 @@
-# 2022-Spring-C-and-C-plus-plus-Programming
+# 2022-Spring-C-and-Cpp-Programming
 ## 簡介
 * 課程名稱：[C/C++程式設計](https://coursemap.aca.ntu.edu.tw/course_map_all/course.php?code=902+48150)
 * 授課教師：[張傑帆](http://homepage.ntu.edu.tw/~jfanc/)
