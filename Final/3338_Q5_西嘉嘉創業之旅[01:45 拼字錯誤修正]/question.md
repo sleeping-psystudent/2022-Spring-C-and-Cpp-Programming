@@ -118,68 +118,170 @@ int main(){
 }
 ```
 
+store.h已經幫你準備好如下：
+
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Store{
+  public:
+    Store();
+    Store(string na, int s, int r, int st, int m);
+    ~Store();
+    void Info();
+    void Rename(string newname);
+    void ChangeRent(int r);
+    void Sell(int num, int price);
+    void Buy(int num, int price);
+    int getMoney();
+    int getRent();
+  private:
+    string name;
+    int size;
+    int rent;
+    int stock;
+    int money;
+};
+```
+
+請完成store.cpp
+
+```cpp
+#include <iostream>
+#include <string>
+#include "store.h"
+
+using namespace std;
+
+Store::Store(){}
+
+Store::Store(string na, int s, int r, int st, int m){
+  // Todo
+}
+
+Store::~Store(){
+  // Todo
+}
+
+void Store::Info(){
+  // Todo
+}
+
+void Store::Rename(string newname){
+  // Todo
+}
+
+void Store::ChangeRent(int r){
+  // Todo
+}
+
+int Store::getRent(){
+  // Todo
+}
+
+void Store::Sell(int num, int price){
+  // Todo
+}
+
+void Store::Buy(int num, int price){
+  // Todo
+}
+
+int Store::getMoney(){
+  // Todo
+}
+```
 ## Input Format
-輸入總共有兩行<br>
-第一行為小明購書清單的檔案名稱<br>
-第二行為書店目錄的檔案名稱<br>
-購書清單的檔案內容範例`list01.txt`如下：<br>
-
-```
-Calculus
-art
-Datastructures&Algorithms
-Naruto
-Calculus
-```
-
-由於檔案內容的大小不固定，所以請讀到EOF為止。每行只有由英文單字(含大小寫)的一本書，不含空白。<br>
-書店目錄的檔案總共`n+1`行。<br>
-第一行為一正整數`n`，接著`n`行為書本的名稱+空白+書本的價格(正整數)。目錄的檔案內容範例`store01.txt`如下：<br>
-
-```
-6A
-lphabet 150
-Accounting 600
-Calculus 550
-Chemistry 400
-Datastructures&Algorithms 380
-Economics 450
-```
+第一行為店名<br>
+第二行分別為大小、單位租金、起始庫存、起始資金<br>
+之後以輸入的指令做不同處理<br>
++ r :輸入新店名
++ i :印出資訊
++ c :更改單位租金
++ d :解構類別
++ b :會有兩個整數輸入，分別代表num和price，之後做買入
++ s :會有兩個整數輸入，分別代表num和price，之後做賣出
++ p :繳交租金(已寫在main.cpp裡)
++ q :離開程式
 
 ## Output Format
-輸出購書的總金額
 
-## Output File Format
-請將清單的書本名稱依照ASCII Code的順序由小到大排好後，再輸出至檔名為`noteXX.txt`的檔案中。例：`list01.txt`就輸入到`note01.txt`<br>
-假設購書清單有`k`本書，則寫入的檔案總共有`k`行，，第`i`行輸出形式為`已排序之書本名稱書本價格`。
-
-注意
-1) 有可能會出現店裡沒有賣小明想要的書的情況，此時第i 行需寫入None
-2) 清單有可能出現重複的書籍，表示小明想要多買，請不要省略
-3) 書店保證不會有同樣書名卻價格不同的書籍
-
-### Sample Input
-```c
-list01.txt
-store01.txt
+### Sample Input 1
+```
+CppStore
+20 50 30 10000
+ic1
+00
+b1
+0 200
+s5
+300
+rG
+ongGuanStore
+ipdq
 ```
 
-### Sample Output
-```c
-1480
+### Sample Output 1
+```
+===Info===
+Name: CppStore
+Size: 20
+Rent: 1000
+Stock: 30
+Money: 10000
+===Info===
+Name: GongGuanStore
+Size: 20
+Rent: 2000
+Stock: 35
+Money: 9500
+Successfully pay rent
+GongGuanStore will no longer rent
 ```
 
-### Sample Output File note01.txt
-```c
-Calculus 550
-Calculus 550
-Datastructures&Algorithms 380
-Naruto None
-art None
+### Sample Input 2
+```
+CDEMart
+-1 -100 0 -300
+c-
+50
+b5
+150
+c5
+00
+s3
+500
+s6
+500
+b1
+000 300
+ipq
+```
+
+### Sample Output 2
+```
+size setting error
+rent setting error
+money setting error
+invalid input
+Not enough stock, invalid selling
+Not enough money, invalid buying
+===Info===
+Name: CDEMart
+Size: 10
+Rent: 5000
+Stock: 2
+Money: 1750
+You don't have enough money to pay the rent
+CDEMart will no longer rent
 ```
 
 ## Hint
-+ subtask 0 (10%) ：sample input
-+ subtask 1-3 (30%) ：清單不需排序，且沒有None 的情況
-+ subtask 4-6 (30%) ：清單不需排序，會出現None
-+ subtask 7-8 (30%) ：無限制
+**修正記錄**
++ 13:30 sample output1 修正，第一行為===Info===
++ 13:45 void buy 處修正`selling`->`buying`如下：需檢查資產的合理性，如果購買總價大於資產，需輸出`Not enough money, invalid buying`並取消交易
++ 13:45 修正拼字錯誤`invaild`->`invalid`
