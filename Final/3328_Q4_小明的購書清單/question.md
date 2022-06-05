@@ -43,18 +43,18 @@ Economics 450
 3) 書店保證不會有同樣書名卻價格不同的書籍
 
 ### Sample Input
-```c
+```
 list01.txt
 store01.txt
 ```
 
 ### Sample Output
-```c
+```
 1480
 ```
 
 ### Sample Output File note01.txt
-```c
+```
 Calculus 550
 Calculus 550
 Datastructures&Algorithms 380
