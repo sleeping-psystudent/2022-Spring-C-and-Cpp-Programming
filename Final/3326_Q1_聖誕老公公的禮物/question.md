@@ -8,24 +8,24 @@
 高度為`n`的聖誕帽
 
 ### Input Sample 1
-```c
+```
 3
 ```
 
 ### Output Sample 1
-```c
+```
   ^
  /  \
 /    \
 ```
 
 ### Input Sample 2
-```c
+```
 1
 ```
 
 ### Output Sample 2
-```c
+```
 ^
 ```
 
