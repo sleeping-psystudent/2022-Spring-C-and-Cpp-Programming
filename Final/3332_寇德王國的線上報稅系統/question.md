@@ -33,7 +33,7 @@
 10) IdentityCheck、GetName中給定的`ID`都存在。
 
 ### Input Sample 1
-```c
+```
 1
 2 2 2
 Anthony 0 2356789 5 AxxxG
@@ -44,7 +44,7 @@ Lantern 7 1235689 7 AXXgTEA
 ```
 
 ### Output Sample 1
-```c
+```
 False
 True
 Lantern 1235689
@@ -52,7 +52,7 @@ Lantern 1235689
 ```
 
 ### Input Sample 2
-```c
+```
 21
 2 1
 Anthony 6 6211 2 FX
@@ -69,7 +69,7 @@ MJKWG 26 16576 10 MTPDXUNMWY
 ```
 
 ### Output Sample 2
-```c
+```
 False
 False
 Anthony 6211
